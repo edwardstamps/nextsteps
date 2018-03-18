@@ -136,8 +136,7 @@ const s = ReactNative.StyleSheet.create({
   },
   buttonBox: {
     flexDirection: 'row',
-    height: 20,
-    alignContent: 'center',
+    height: 25,
   },
   main2: {
     padding: 0,
@@ -186,7 +185,7 @@ const s = ReactNative.StyleSheet.create({
   description: {
     fontSize: 16,
     marginBottom: 5,
-    color: "white"
+    color: "white",
   },
   textBox: {
     paddingLeft: 20,
