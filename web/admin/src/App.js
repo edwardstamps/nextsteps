@@ -20,7 +20,7 @@ import client from '@doubledutch/admin-client'
 import List from './List'
 import FirebaseConnector from '@doubledutch/firebase-connector'
 import { CSVLink } from 'react-csv';
-const fbc = FirebaseConnector(client, 'msoffers')
+const fbc = FirebaseConnector(client, 'msnextsteps')
 fbc.initializeAppWithSimpleBackend()
 
 export default class App extends Component {
