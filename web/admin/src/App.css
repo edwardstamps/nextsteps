@@ -1,0 +1,237 @@
+:root {
+  font: 400 14px -apple-system, BlinkMacSystemFont, 'Fira Sans', 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #4A4A4A;
+}
+
+.App-intro {
+  font-size: large;
+  text-align: center;
+}
+
+.avatar {
+  width: 40px;
+}
+
+.bigBoxTitle{
+  font-size: 24px;
+  height: 24px;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+
+
+.topBox{
+  margin-left: 21px;
+  margin-right: 21px;
+}
+
+.qaButton{
+  background-color: #009DCD;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-size: 13px;
+  height: 34px;
+  width: 150px;
+  margin-top: 10px;
+}
+
+.qaButtonOff{
+  background-color: #9B9B9b;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 13px;
+  height: 34px;
+  margin-top: 10px;
+}
+
+.csvButton{
+  text-decoration: none;
+  background-color: rgba(0,157,205, 0.2);
+  border: 1px solid #009DCD;
+  border-radius: 2px;
+  color: #009DCD;
+  font-size: 13px;
+  margin-top: 10px;
+  padding: 8px 15px;
+}
+
+.questionBox {
+  width: 50%;
+  margin-right: 20px;
+}
+
+.messages{
+  display: flex;
+  margin-left: 21px;
+  margin-top: 48px;
+}
+
+.boxTitle{
+  font-size: 16px;
+  height: 22px;
+  font-weight: 600;
+}
+
+.questionInput{
+  display: flex;
+  width: 98%;
+  padding-Top: 10px;
+  padding-Left: 10px;
+  height: 113px;
+  font-size: 15px;
+  color: #364347;
+}
+
+.publishButton{
+  background-color: #009DCD;
+  border: none;
+  border-radius: 2px;
+  width: 77px;
+  height: 32px;
+  margin-top: 15px;
+  color: white;
+  font-size: 13px;
+}
+
+.buttonText{
+  margin-right: 15px;
+  font-size: 14px;
+  height: 19px;
+  margin-top: 23px;
+}
+
+.counterText{
+  font-size: 15px;
+  color: #979797;
+  flex: 1;
+  text-align: right;
+  margin-top: -20px;
+  margin-right: 15px;
+}
+
+.buttonBox{
+  float: right;
+  display: flex;
+  margin-right: -5px;
+}
+
+.statusesBox{
+  display: flex;
+  flex: 1;
+  flex-direction: row wrap;
+  margin: 10px;
+  margin-right: 05px;
+  margin-top: 30px;
+}
+
+
+.listBox{
+  padding: 10px;
+}
+
+.list{
+  display: flex;
+  border: 1px solid #DEDEDE;
+  height: 500px;
+  flex-direction: column;
+  list-style: none;
+  margin-top: 0px;
+  padding: 0px;
+  overflow: auto;
+}
+
+.list li {
+  margin: 0px;
+  padding: 0px;
+}
+
+.list li:nth-child(odd) { background: #F8F8F8 }
+
+.listItemBox{
+  display: flex;
+  flex: 1;
+  height: 50px;
+  align-content: center;
+  justify-content: center;
+}
+
+.headerItemBox{
+  display: flex;
+  flex: 1;
+  padding: 0px;
+  margin: 20px 0px 0px 0px;
+  border: 1px solid #DEDEDE;
+}
+
+.headerItemBox p{
+  margin-left: 12px;
+  font-size: 16px;
+  height: 20px;
+  color: #A8A8A8;
+  margin-top: 10px;
+  display: flex;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: 250px;
+  padding-left: 5px;
+}
+
+.offerTitle{
+  font-size: 16px;
+  height: 20px;
+  color: #A8A8A8;
+  margin-top: 10px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.itemTitle{
+  margin-left: 16px;
+  font-size: 16px;
+  display: flex;
+  width: 250px;
+  flex-direction: row;
+  margin-right: 10px;
+  padding: 0px;
+  height: 20px;
+}
+
+.itemDes {
+  margin-left: 12px;
+  font-size: 16px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.button1 {
+  height: 22px;
+  width: 21px;
+  margin-top: 11px;
+  margin-right: 21px;
+}
+
+.button2 {
+  height: 12px;
+  width: 16px;
+  margin-top: 16px;
+  margin-right: 21px;
+}
+
+.closeButton{
+  flex: 1;
+  display: flex;
+  float: right;
+  margin-Top: 5px;
+  border: none;
+  margin-Left: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  background-color: #ffffff;
+}
