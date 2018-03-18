@@ -39,10 +39,13 @@ export default class Offers extends Component {
       <View>
         <View style={s.border}/>
         <TouchableOpacity style={s.container} onPress={this.handleOpen}>
-        <Image source={{uri: image1}} style={s.dimensionStyle}>
+        <Image source={{uri: image1}} style={s.dimensionStyle} alt="Microsoft">
           <View style={{backgroundColor: "rgba(52, 52, 52, 0.7)", flex: 1, justifyContent: 'center', padding: 10}}>
             <Text style={s.title}>{title1}</Text>
-            <Text style={s.description}>Show more {this.showIcon(rotate)}</Text>
+            <View style={s.buttonBox}>
+              <Text style={s.description}>Show more</Text>
+              {this.showIcon(rotate)}
+            </View>
           </View>
         </Image>
         </TouchableOpacity>
@@ -114,11 +117,7 @@ const s = ReactNative.StyleSheet.create({
     backgroundColor: "#FFFFFF"
   },
 
-  chevron : {
-    paddingTop: 5,
-    height: 12,
-    width: 12,
-  },
+
   dimensionStyle : {
     flexDirection: "row", 
     flexGrow: 1,
@@ -134,6 +133,11 @@ const s = ReactNative.StyleSheet.create({
     borderTopWidth:1,
     backgroundColor: 'white',
     flexDirection: 'row'
+  },
+  buttonBox: {
+    flexDirection: 'row',
+    height: 20,
+    alignContent: 'center',
   },
   main2: {
     padding: 0,
