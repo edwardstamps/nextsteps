@@ -37,11 +37,35 @@ export default class App extends Component {
   componentDidMount() {
 
     this.signin.then(() => {
-        const checkRef = fbc.database.public.allRef("click")
-        checkRef.on('child_added', data => {
-          var obj = data.val()
-          obj["clickDate"] = new Date(obj.clickUTC).toLocaleDateString()
-          this.setState({ clicks: [...this.state.clicks, {...obj, key: data.key }] })
+        const adminableRef = fbc.database.private.adminableUsersRef()
+        adminableRef.on('child_added', data => {
+          var newClicks = []
+          for (var i in data.val().click) {   
+            var obj = data.val().click[i]
+            obj["key"] = i
+            obj["clickDate"] = new Date(obj.clickUTC).toLocaleDateString()
+            newClicks.push(obj)
+          }
+          const totalClicks = this.state.clicks.concat(newClicks)
+          totalClicks.sort(sortUsers)
+          this.setState({ clicks: totalClicks})
+        })
+        adminableRef.on('child_changed', data => {
+          var newClicks = []
+
+          for (var i in data.val().click) {
+            var obj = data.val().click[i]
+            obj["key"] = i
+            obj["clickDate"] = new Date(obj.clickUTC).toLocaleDateString()
+            if (this.state.clicks.find(click => click.key === i)) {
+            }
+            else {
+              newClicks.push(obj)     
+            }  
+          }
+          var totalClicks = this.state.clicks.concat(newClicks)
+          totalClicks.sort(sortUsers)
+          this.setState({ clicks: totalClicks})
         })
     })
     .catch(err => alert(err))
