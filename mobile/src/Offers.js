@@ -101,10 +101,6 @@ export default class Offers extends Component {
     this.props.sendData(this.props.title1)
     var currentText = this.state.renderConfirm
     this.setState({renderConfirm: !currentText})
-    setTimeout(() => {
-      this.handleClose()
-      }
-      ,3000)
   }
 
   handleClose = () => {
@@ -125,7 +121,7 @@ const s = ReactNative.StyleSheet.create({
   dimensionStyle : {
     flexDirection: "row", 
     flexGrow: 1,
-    aspectRatio: 2.0165,
+    aspectRatio: 1.6,
     justifyContent: 'center',
     resizeMode: 'cover',
     alignItems: 'flex-end'

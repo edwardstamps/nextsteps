@@ -20,7 +20,7 @@ import client from '@doubledutch/admin-client'
 import List from './List'
 import FirebaseConnector from '@doubledutch/firebase-connector'
 import { CSVLink } from 'react-csv';
-const fbc = FirebaseConnector(client, 'msnextsteps')
+const fbc = FirebaseConnector(client, 'msoffers')
 fbc.initializeAppWithSimpleBackend()
 
 export default class App extends Component {
@@ -43,7 +43,7 @@ export default class App extends Component {
           for (var i in data.val().click) {   
             var obj = data.val().click[i]
             obj["key"] = i
-            obj["clickDate"] = new Date(obj.clickUTC).toLocaleDateString()
+            obj["clickDate"] = new Date(obj.clickTime).toLocaleDateString()
             newClicks.push(obj)
           }
           const totalClicks = this.state.clicks.concat(newClicks)
@@ -56,7 +56,7 @@ export default class App extends Component {
           for (var i in data.val().click) {
             var obj = data.val().click[i]
             obj["key"] = i
-            obj["clickDate"] = new Date(obj.clickUTC).toLocaleDateString()
+            obj["clickDate"] = new Date(obj.clickTime).toLocaleDateString()
             if (this.state.clicks.find(click => click.key === i)) {
             }
             else {
@@ -99,5 +99,5 @@ export default class App extends Component {
 }
 
 function sortUsers(a,b) {
-  return a.clickUTC > b.clickUTC ? -1 : 1
+  return a.clickTime > b.clickTime ? -1 : 1
 }
