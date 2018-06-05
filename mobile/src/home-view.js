@@ -21,7 +21,7 @@ import ReactNative, {
 import client, { TitleBar } from '@doubledutch/rn-client'
 import Offers from './Offers'
 import FirebaseConnector from '@doubledutch/firebase-connector'
-const fbc = FirebaseConnector(client, 'msoffers')
+const fbc = FirebaseConnector(client, 'msnextsteps')
 fbc.initializeAppWithSimpleBackend()
 
 export default class HomeView extends Component {
